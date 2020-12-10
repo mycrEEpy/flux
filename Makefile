@@ -31,7 +31,7 @@ godeps=$(shell go list -deps -f '{{if not .Standard}}{{ $$dep := . }}{{range .Go
 FLUXD_DEPS:=$(call godeps,./cmd/fluxd/...)
 FLUXCTL_DEPS:=$(call godeps,./cmd/fluxctl/...)
 
-IMAGE_TAG:=$(shell ./docker/image-tag)
+IMAGE_TAG:=v1.21.0-tui-v1
 VCS_REF:=$(shell git rev-parse HEAD)
 BUILD_DATE:=$(shell date -u +'%Y-%m-%dT%H:%M:%SZ')
 
